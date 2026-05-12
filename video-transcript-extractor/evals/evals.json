@@ -1,0 +1,23 @@
+{
+  "skill_name": "video-transcript-extractor",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "我想从这个英文视频提取讲稿，请给我一个清晰的文本版本，去除时间戳。视频链接：https://www.youtube.com/watch?v=iCvmsMzlF7o",
+      "expected_output": "应该生成两个 .docx 文件：一个英文版本（video-title-en.docx）和一个中文翻译版本（video-title-zh.docx）。文件内容应该是清晰的纯文本讲稿，没有时间戳。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "我想从这个没有字幕的视频提取内容。请为我创建一份文档。链接：https://www.youtube.com/watch?v=TMmq9Wx1AIQ",
+      "expected_output": "即使视频没有字幕，也应该成功生成 .docx 文件。内容应该从视频元数据和描述提取（标题、描述、章节等），并在文档中注明'此视频没有字幕，内容从元数据提取'。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "这个是一个技术讲座，请帮我提取讲稿并生成文档。链接：https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "expected_output": "应该成功提取讲稿并生成相应的 .docx 文件。如果是英文应该同时提供中文翻译版。文本应该清晰可读，格式良好。",
+      "files": []
+    }
+  ]
+}
